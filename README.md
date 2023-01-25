@@ -22,9 +22,9 @@ It provides the general understanding how the components are connected to each o
     3. Enter created folder with **cd my-app**
     4. Install Bootstrap **npm install bootstrap --save**
     5. Create all componets:
-        1. ng g c login - g-generate c-component login-name of component
-        2. ng g c register
-        3. ng g c dashboard
+        1. **ng g c login** - g-generate c-component login-name of component
+        2. **ng g c register**
+        3. **ng g c dashboard**
     6. Create class "register":
         1. ng g class register - g-generate class register-name of class
     7. Create connection service:
@@ -32,7 +32,7 @@ It provides the general understanding how the components are connected to each o
     8. Add to app/src/styles.css "@import url("../node_modules/bootstrap/dist/css/bootstrap.min.css")"
 4. Copy all the code to the appropriate files and try to run it with **ng serve** command via terminal
 5. If everything fine go to **Development server** section
-6. Finalllok should be like:
+6. Final look for the pages after the project is up and running:
     ![AddUser](/images/addUserPage.PNG)
     ![Login](/images/loginPage.PNG)  
 
