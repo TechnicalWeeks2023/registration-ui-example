@@ -18,7 +18,7 @@ It provides the general understanding how the components are connected to each o
     5. Links to some software you can find on the last slides of presentation
 3. Create new folder where the project would settle
     1. Open VS Code and select created folder as start point and run terminal for it
-    2. **ng new my-app --skip-tests** last key alows to skip unit tests and reduce the number of project files
+    2. **ng new my-app --skip-tests** last key alows to skip unit tests and reduce the number of project files, add routing and select CSS for styling
     3. Enter created folder with **cd my-app**
     4. Install Bootstrap **npm install bootstrap --save**
     5. Create all componets:
