@@ -1,0 +1,26 @@
+<div style="text-align:center">
+    <h1> Load all users </h1>
+    <button type="button" (click)="clickEvent()" class="btn btn-primary">Load users</button>
+ </div>
+
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Password</th>
+        <th scope="col">Email</th>
+        <th scope="col">Date of Birth</th>
+        <th scope="col">Zip Code</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users">
+        <td>{{user.name}}<div *ngIf="!user.name"><p class="text-danger">NULL</p></div></td>
+        <td>{{user.password}}<div *ngIf="!user.password"><p class="text-danger">NULL</p></div></td>
+        <td>{{user.email}}<div *ngIf="!user.email"><p class="text-danger">NULL</p></div></td>
+        <td>{{user.dateOfBirth}}<div *ngIf="!user.dateOfBirth"><p class="text-danger">NULL</p></div></td>
+        <td>{{user.zipCode}}<div *ngIf="!user.zipCode"><p class="text-danger">NULL</p></div></td>
+      </tr>
+
+    </tbody>
+  </table>

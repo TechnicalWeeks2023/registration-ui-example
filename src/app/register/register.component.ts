@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';    
 import { LoginService } from '../login.service';    
-import {Register} from '../register';    
-import {Observable} from 'rxjs';    
+import { User} from '../user';    
+import { Observable} from 'rxjs';    
 import { NgForm, FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms';    
     
 @Component({    
@@ -12,31 +12,31 @@ import { NgForm, FormBuilder, FormGroup, Validators, FormControl } from '@angula
 export class RegisterComponent implements OnInit {    
   data = false;    
   userForm: FormGroup;    
-  massage:string;    
+  message:string;    
   constructor(private formbulider: FormBuilder,private loginService:LoginService) { }    
     
   ngOnInit() {    
     this.userForm = this.formbulider.group({    
-      UserName: ['', [Validators.required]],    
-      LoginName: ['', [Validators.required]],    
-      Password: ['', [Validators.required]],    
-      Email: ['', [Validators.required]],    
-      ContactNo: ['', [Validators.required]],    
-      Address: ['', [Validators.required]],    
+      name: ['', [Validators.required]],    
+      password: ['', [Validators.required]],    
+      email: ['', [Validators.required]],    
+      dateOfBirth: ['', [Validators.required]],    
+      zipCode: ['', [Validators.required]],    
     });    
   }    
    onFormSubmit()    
   {    
     const user = this.userForm.value;    
-    this.Createemployee(user);    
-  }    
-  Createemployee(register:Register)    
+    this.CreateUser(user);    
+  } 
+
+  CreateUser(user:User)    
   {    
-  this.loginService.CreateUser(register).subscribe(    
+  this.loginService.CreateUser(user).subscribe(    
     ()=>    
     {    
       this.data = true;    
-      this.massage = 'Data saved Successfully';    
+      this.message = 'Data saved Successfully';    
       this.userForm.reset();    
     });    
   }    

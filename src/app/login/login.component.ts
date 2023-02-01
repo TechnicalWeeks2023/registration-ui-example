@@ -22,20 +22,6 @@ export class LoginComponent {
   }    
   login(){    
     debugger;    
-    this.LoginService.Login(this.model).subscribe(    
-      (data: any) => {    
-        debugger;    
-        if(data.Status=="Success")    
-        {       
-          this.router.navigate(['/Dashboard']);    
-          debugger;    
-        }    
-        else{    
-          this.errorMessage = data.Message;    
-        }    
-      },    
-      (error : any) => {    
-        this.errorMessage = error.message;    
-      });    
+      
   };    
  }     
